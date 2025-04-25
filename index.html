@@ -1,4 +1,45 @@
-<form action="scrape" method="GET">
-  <input type="url" name="url" placeholder="Enter URL">
-  <button type="submit">Scrape</button>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Web Scraper</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        input[type="url"] {
+            width: 400px;
+            padding: 8px;
+        }
+        label {
+            display: block;
+            margin: 6px 0;
+        }
+        button {
+            margin-top: 10px;
+            padding: 8px 16px;
+            font-size: 16px;
+        }
+        .checkbox-group {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simple Web Scraper</h1>
+
+    <form action="scrape" method="GET">
+        <label for="url">Website URL:</label>
+        <input type="url" id="url" name="url" placeholder="https://example.com" required>
+
+        <div class="checkbox-group">
+            <label><input type="checkbox" name="options" value="title"> Title</label>
+            <label><input type="checkbox" name="options" value="links"> Links</label>
+            <label><input type="checkbox" name="options" value="images"> Images</label>
+        </div>
+
+        <button type="submit">Scrape</button>
+    </form>
+</body>
+</html>
